@@ -33,7 +33,7 @@ CREATE TABLE `connection` (
   `db_type` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`u_id`,`conn_name`),
   CONSTRAINT `fk_connection` FOREIGN KEY (`u_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -59,7 +59,7 @@ CREATE TABLE `datasrc` (
   `path` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`u_id`,`file_name`),
   CONSTRAINT `fk_datasrc` FOREIGN KEY (`u_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,7 +96,7 @@ CREATE TABLE `model` (
   `industry` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`u_id`,`model_name`),
   CONSTRAINT `fk_model` FOREIGN KEY (`u_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +122,7 @@ CREATE TABLE `processplatform` (
   `path` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`u_id`,`file_name`),
   CONSTRAINT `fk_processplatform` FOREIGN KEY (`u_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -148,7 +148,7 @@ CREATE TABLE `report` (
   `path` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`u_id`,`report_name`),
   CONSTRAINT `fk_report` FOREIGN KEY (`u_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -175,7 +175,7 @@ CREATE TABLE `stat` (
   `industry` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`u_id`,`stat_file_name`),
   CONSTRAINT `fk_stat` FOREIGN KEY (`u_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -201,7 +201,7 @@ CREATE TABLE `user` (
   `user_mail` varchar(100) NOT NULL,
   `user_status` int NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -228,7 +228,7 @@ CREATE TABLE `visual` (
   `industry` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`u_id`,`visual_file_name`),
   CONSTRAINT `fk_visual` FOREIGN KEY (`u_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -254,7 +254,7 @@ CREATE TABLE `worksheet` (
   `path` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`u_id`,`file_name`),
   CONSTRAINT `fk_worksheet` FOREIGN KEY (`u_id`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
